@@ -24,7 +24,8 @@ export const metadata: Metadata = {
   },
   openGraph: {
     type: 'website',
-    siteName: '',
+    siteName: 'astral-playground',
+    url: 'https://astral-playland.vercel.app/',
     title: {
       default: 'astral-playland',
       template: 'astral-playland',
@@ -43,7 +44,7 @@ export const metadata: Metadata = {
     follow: true,
     index: true,
   },
-  metadataBase: new URL('https://vercel.com'),
+  metadataBase: new URL('https://astral-playland.vercel.app/'),
 };
 
 export default function RootLayout({
