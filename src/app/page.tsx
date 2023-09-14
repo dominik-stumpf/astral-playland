@@ -11,8 +11,13 @@ import {
 } from '@react-three/postprocessing';
 import { Perf } from 'r3f-perf';
 import { Suspense } from 'react';
+import * as THREE from 'three';
 
-// const aberrationOffset = 0.0003;
+const aberrationOffset = 0.0004;
+const aberrationOffsetVector = new THREE.Vector2(
+  aberrationOffset,
+  aberrationOffset,
+);
 
 export default function Page() {
   return (
@@ -43,6 +48,7 @@ export default function Page() {
             <ChromaticAberration
               radialModulation={false}
               modulationOffset={0}
+              offset={aberrationOffsetVector}
             />
           </EffectComposer>
         </Canvas>

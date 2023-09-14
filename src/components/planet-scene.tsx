@@ -12,7 +12,6 @@ import {
 import { useFrame, useLoader } from '@react-three/fiber';
 import { useEffect, useMemo, useRef } from 'react';
 import * as THREE from 'three';
-// import { TextureLoader } from 'three/src/loaders/TextureLoader';
 
 function Planet() {
   const [roughness, normal, displacement, ao, diffuse] = useTexture([
@@ -45,7 +44,7 @@ function Planet() {
 }
 
 export function Background() {
-  const texture = useTexture('/galaxy.jpg');
+  const texture = useTexture('/images/milky-way.jpg');
   return (
     <Environment background near={1} far={1000} resolution={2048}>
       <mesh>
