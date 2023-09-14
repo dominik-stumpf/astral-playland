@@ -1,0 +1,60 @@
+{
+  "name": "astral-playland",
+  "description": "three.js app showcasing the universe 🌟",
+  "version": "0.1.0",
+  "private": true,
+  "author": {
+    "email": "s.dominik.work@gmail.com",
+    "name": "Dominik Stumpf",
+    "url": "https://dominikstumpf.com"
+  },
+  "homepage": "",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dominik-stumpf/astral-playland.git"
+  },
+  "browserslist": {
+    "production": [">0.2%", "not dead", "not op_mini all"],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "engines": {
+    "node": ">=16.10.0"
+  },
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "rome ci",
+    "write-ci": "rome check --apply-unsafe src && rome format --write src"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@ducanh2912/next-pwa": "^9.5.0",
+    "@iconify-icon/react": "^1.0.8",
+    "@react-three/a11y": "^3.0.0",
+    "@react-three/drei": "^9.83.9",
+    "@react-three/fiber": "^8.14.1",
+    "@react-three/postprocessing": "^2.15.1",
+    "next": "13.4.19",
+    "postcss": "8.4.29",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "three": "^0.156.1",
+    "three-stdlib": "^2.26.0"
+  },
+  "devDependencies": {
+    "@types/node": "20.6.0",
+    "@types/react": "18.2.21",
+    "@types/react-dom": "18.2.7",
+    "r3f-perf": "^7.1.2",
+    "raw-loader": "^4.0.2",
+    "rome": "^12.1.3",
+    "tailwindcss": "^3.3.3",
+    "typescript": "5.2.2",
+    "autoprefixer": "10.4.15"
+  }
+}
