@@ -3,6 +3,7 @@
 import { ScenePlanet } from '@/components/planet-scene';
 import { Canvas } from '@react-three/fiber';
 import {
+  Bloom,
   ChromaticAberration,
   EffectComposer,
   TiltShift,
@@ -33,13 +34,12 @@ export default function Page() {
             depth: false,
           }}
         >
-          <color attach='background' args={[0x000000]} />
+          <color attach='background' args={[0x0f0f0f]} />
           <ScenePlanet />
           {process.env.NODE_ENV === 'development' && (
             <Perf position='top-left' />
           )}
           <EffectComposer>
-            {/* <DepthOfField /> */}
             <TiltShift />
             <Vignette darkness={0.5} eskil={false} />
             <ChromaticAberration
@@ -47,13 +47,6 @@ export default function Page() {
               radialModulation={false}
               modulationOffset={0}
             />
-            {/* <Noise opacity={0.02} /> */}
-            {/* <Bloom
-            luminanceThreshold={0.5}
-            luminanceSmoothing={0.8}
-            height={256}
-            opacity={2}
-          /> */}
           </EffectComposer>
         </Canvas>
       </Suspense>

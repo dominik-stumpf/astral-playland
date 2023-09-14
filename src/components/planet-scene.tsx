@@ -52,7 +52,7 @@ export function Background() {
         <meshBasicMaterial
           map={texture}
           side={THREE.BackSide}
-          color={0x777777}
+          color={0x555555}
         />
       </mesh>
     </Environment>
@@ -66,8 +66,8 @@ export function ScenePlanet() {
       <PerspectiveCamera fov={70} makeDefault position={[0, 0, 5]} />
       <OrbitControls />
       <Background />
-      <directionalLight castShadow intensity={2} position={[0, 0, 500]} />
       <ambientLight intensity={0.2} />
+      <directionalLight castShadow intensity={6} position={[0, 0, 500]} />
       <Stars fade />
       <Sparkles
         scale={32}
