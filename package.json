@@ -14,7 +14,11 @@
     "url": "https://github.com/dominik-stumpf/astral-playland.git"
   },
   "browserslist": {
-    "production": [">0.2%", "not dead", "not op_mini all"],
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
     "development": [
       "last 1 chrome version",
       "last 1 firefox version",
@@ -36,15 +40,15 @@
     "@ducanh2912/next-pwa": "^9.5.0",
     "@iconify-icon/react": "^1.0.8",
     "@react-three/a11y": "^3.0.0",
-    "@react-three/drei": "^9.83.9",
-    "@react-three/fiber": "^8.14.1",
-    "@react-three/postprocessing": "^2.15.1",
+    "@react-three/drei": "9.58.4",
+    "@react-three/fiber": "8.12.0",
+    "@react-three/postprocessing": "2.7.1",
     "leva": "^0.9.35",
     "next": "13.4.19",
     "postcss": "8.4.29",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "three": "^0.156.1",
+    "three": "0.151.3",
     "three-stdlib": "^2.26.0"
   },
   "devDependencies": {

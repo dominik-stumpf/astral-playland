@@ -6,7 +6,6 @@ import {
   PerspectiveCamera,
   Sparkles,
   Stars,
-  Text3D,
   useTexture,
 } from '@react-three/drei';
 import { useFrame, useLoader } from '@react-three/fiber';
@@ -52,7 +51,7 @@ export function Background() {
         <meshBasicMaterial
           map={texture}
           side={THREE.BackSide}
-          color={0x555555}
+          color={0x777777}
         />
       </mesh>
     </Environment>
@@ -67,7 +66,7 @@ export function ScenePlanet() {
       <OrbitControls />
       <Background />
       <ambientLight intensity={0.2} />
-      <directionalLight castShadow intensity={6} position={[0, 0, 500]} />
+      <directionalLight castShadow intensity={2} position={[0, 0, 500]} />
       <Stars fade />
       <Sparkles
         scale={32}
