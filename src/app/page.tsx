@@ -1,7 +1,6 @@
 'use client';
 
 import { ScenePlanet } from '@/components/planet-scene';
-import { GizmoHelper, GizmoViewport } from '@react-three/drei';
 import { Canvas } from '@react-three/fiber';
 import {
   ChromaticAberration,
@@ -36,9 +35,6 @@ export default function Page() {
         >
           <color attach='background' args={[0x000000]} />
           <ScenePlanet />
-          <GizmoHelper>
-            <GizmoViewport />
-          </GizmoHelper>
           {process.env.NODE_ENV === 'development' && (
             <Perf position='top-left' />
           )}
