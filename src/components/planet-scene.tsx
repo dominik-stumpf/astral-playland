@@ -15,11 +15,11 @@ import * as THREE from 'three';
 
 function Planet() {
   const [roughness, normal, displacement, ao, diffuse] = useTexture([
-    'https://dl.polyhaven.org/file/ph-assets/Textures/jpg/4k/plastered_stone_wall/plastered_stone_wall_rough_4k.jpg',
-    'https://dl.polyhaven.org/file/ph-assets/Textures/jpg/4k/plastered_stone_wall/plastered_stone_wall_nor_gl_4k.jpg',
-    'https://dl.polyhaven.org/file/ph-assets/Textures/jpg/4k/plastered_stone_wall/plastered_stone_wall_disp_4k.jpg',
-    'https://dl.polyhaven.org/file/ph-assets/Textures/jpg/4k/plastered_stone_wall/plastered_stone_wall_ao_4k.jpg',
-    'https://dl.polyhaven.org/file/ph-assets/Textures/jpg/4k/plastered_stone_wall/plastered_stone_wall_diff_4k.jpg',
+    '/textures/plastered-stone-wall/plastered_stone_wall_rough_4k.jpg',
+    '/textures/plastered-stone-wall/plastered_stone_wall_nor_gl_4k.jpg',
+    '/textures/plastered-stone-wall/plastered_stone_wall_disp_4k.jpg',
+    '/textures/plastered-stone-wall/plastered_stone_wall_ao_4k.jpg',
+    '/textures/plastered-stone-wall/plastered_stone_wall_diff_4k.jpg',
   ]);
 
   const meshRef = useRef<THREE.Mesh>(null!);
