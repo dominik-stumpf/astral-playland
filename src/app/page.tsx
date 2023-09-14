@@ -34,7 +34,7 @@ export default function Page() {
             depth: false,
           }}
         >
-          <color attach='background' args={[0, 0, 0]} />
+          <color attach='background' args={[0x000000]} />
           <ScenePlanet />
           {process.env.NODE_ENV === 'development' && (
             <Perf position='top-left' />
