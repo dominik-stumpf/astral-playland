@@ -20,7 +20,8 @@
         "noRedundantUseStrict": "off"
       },
       "style": {
-        "noImplicitBoolean": "off"
+        "noImplicitBoolean": "off",
+        "noNonNullAssertion": "warn"
       }
     }
   },
