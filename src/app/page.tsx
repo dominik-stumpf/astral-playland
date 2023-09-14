@@ -43,13 +43,21 @@ export default function Page() {
             <Perf position='top-left' />
           )}
           <EffectComposer>
+            {/* <DepthOfField /> */}
             <TiltShift />
-            <Vignette darkness={0.8} eskil={false} />
+            <Vignette darkness={0.5} eskil={false} />
             <ChromaticAberration
+              offset={aberrationOffsetVector}
               radialModulation={false}
               modulationOffset={0}
-              offset={aberrationOffsetVector}
             />
+            {/* <Noise opacity={0.02} /> */}
+            {/* <Bloom
+            luminanceThreshold={0.5}
+            luminanceSmoothing={0.8}
+            height={256}
+            opacity={2}
+          /> */}
           </EffectComposer>
         </Canvas>
       </Suspense>
