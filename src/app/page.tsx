@@ -13,7 +13,7 @@ import { Perf } from 'r3f-perf';
 import { Suspense } from 'react';
 import * as THREE from 'three';
 
-const aberrationOffset = 0.0004;
+const aberrationOffset = 0.0003;
 const aberrationOffsetVector = new THREE.Vector2(
   aberrationOffset,
   aberrationOffset,
@@ -21,10 +21,10 @@ const aberrationOffsetVector = new THREE.Vector2(
 
 export default function Page() {
   return (
-    <main className='h-full w-full pointer-events-none'>
+    <main className='h-full w-full pointer-events-none bg-black'>
       <Suspense fallback={'loading ...'}>
         <Canvas
-          className='h-full w-full'
+          className='h-full w-full cursor-grab active:cursor-grabbing'
           shadows
           gl={{
             powerPreference: 'high-performance',
@@ -34,7 +34,7 @@ export default function Page() {
             depth: false,
           }}
         >
-          <color attach='background' args={[0x0f0f0f]} />
+          <color attach='background' args={[0x000000]} />
           <ScenePlanet />
           <GizmoHelper>
             <GizmoViewport />

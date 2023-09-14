@@ -66,7 +66,7 @@ export function ScenePlanet() {
       <PerspectiveCamera fov={70} makeDefault position={[0, 0, 5]} />
       <OrbitControls />
       <Background />
-      <directionalLight castShadow intensity={2} position={[0, 0, 4]} />
+      <directionalLight castShadow intensity={2} position={[0, 0, 500]} />
       <ambientLight intensity={0.2} />
       <Stars fade />
       <Sparkles
