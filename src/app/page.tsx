@@ -34,7 +34,7 @@ export default function Page() {
             depth: false,
           }}
         >
-          <color attach='background' args={[0x0f0f0f]} />
+          <color attach='background' args={[0x00000]} />
           <ScenePlanet />
           {process.env.NODE_ENV === 'development' && (
             <Perf position='top-left' />
@@ -42,11 +42,7 @@ export default function Page() {
           <EffectComposer>
             <TiltShift />
             <Vignette darkness={0.5} eskil={false} />
-            <ChromaticAberration
-              offset={aberrationOffsetVector}
-              radialModulation={false}
-              modulationOffset={0}
-            />
+            <ChromaticAberration offset={aberrationOffsetVector} />
           </EffectComposer>
         </Canvas>
       </Suspense>
