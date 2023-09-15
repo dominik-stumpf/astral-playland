@@ -1,3 +1,4 @@
+import { Star } from './star/star';
 import {
   CurveModifier,
   CurveModifierRef,
@@ -66,7 +67,7 @@ export function ScenePlanet() {
       <OrbitControls />
       <Background />
       <ambientLight intensity={0.2} />
-      <directionalLight castShadow intensity={2} position={[0, 0, 500]} />
+      <Star />
       <Stars fade />
       <Sparkles
         scale={32}
