@@ -5,9 +5,22 @@
 ### About
 I initially started this as a random fun little project in CodeSandbox, but it became cool enough that I decided to make a separate repo on Github for it.
 
+This project is not aimed at being realistic, but rather just to be fun.
+
+### Goals
+
+- [ ] Basic star
+- [ ] Pulsar star
+- [ ] Flare star
+- [ ] Black hole
+- [ ] Physics engine
+- [ ] Planet atmosphere
+- [ ] Exploration alternatives
+
 ### Captures
 ![closing planet](/showcase/images/closing-planet.png)
 ![distant planet](/showcase/images/distant-planet.png)
+![near rocky planet](/showcase/videos/near-rocky-planet.mp4)
 
 ### Credits & references
 
