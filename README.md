@@ -20,7 +20,6 @@ This project is not aimed at being realistic, but rather just to be fun.
 ### Captures
 ![closing planet](/showcase/images/closing-planet.png)
 ![distant planet](/showcase/images/distant-planet.png)
-![near rocky planet](/showcase/videos/near-rocky-planet.mp4)
 
 ### Credits & references
 
