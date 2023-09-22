@@ -1,6 +1,7 @@
 # 🌌 astral-playland
 
-> **Note:** Dedicated graphics card is recommended for full experience.
+> [!NOTE]
+> Dedicated graphics card is recommended for full experience.
 
 ### About
 I initially started this as a random fun little project in CodeSandbox, but it became cool enough that I decided to make a separate repo on Github for it.
