@@ -1,4 +1,4 @@
-# 🌌 astral-playland
+# :milky_way: astral-playland
 
 > [!NOTE]
 > Dedicated graphics card is recommended for full experience.
