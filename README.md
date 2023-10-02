@@ -10,7 +10,7 @@ This project is not aimed at being realistic, but rather just to be fun.
 
 ### Goals
 
-- [ ] Basic star
+- [x] Basic star
 - [ ] Pulsar star
 - [ ] Flare star
 - [ ] Black hole
