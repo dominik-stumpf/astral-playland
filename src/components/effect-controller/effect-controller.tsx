@@ -116,7 +116,12 @@ export function EffectController() {
         />
         <Noise opacity={noise} premultiply blendFunction={BlendFunction.ADD} />
         <HueSaturation hue={hue} saturation={saturation} />
-        <Bloom />
+        <Bloom
+          luminanceThreshold={0.5}
+          luminanceSmoothing={0.8}
+          height={256}
+          opacity={2}
+        />
         {/* <TiltShift /> */}
       </EffectComposer>
     )
