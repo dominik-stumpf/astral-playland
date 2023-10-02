@@ -1,7 +1,6 @@
 'use client';
 
 import {
-  EffectContext,
   EffectController,
   EffectControllerWrapper,
 } from '@/components/effect-controller/effect-controller';
