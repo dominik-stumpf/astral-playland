@@ -1,7 +1,5 @@
 import { Star } from './star/star';
 import {
-  CurveModifier,
-  CurveModifierRef,
   Environment,
   OrbitControls,
   PerspectiveCamera,
@@ -9,8 +7,8 @@ import {
   Stars,
   useTexture,
 } from '@react-three/drei';
-import { useFrame, useLoader } from '@react-three/fiber';
-import { useEffect, useMemo, useRef } from 'react';
+import { useFrame } from '@react-three/fiber';
+import { useRef } from 'react';
 import * as THREE from 'three';
 
 function Planet() {
@@ -23,13 +21,14 @@ function Planet() {
   ]);
 
   const meshRef = useRef<THREE.Mesh>(null!);
+
   useFrame((state) => {
     meshRef.current.rotateY(0.0005);
   });
 
   return (
     <mesh castShadow receiveShadow ref={meshRef}>
-      <sphereGeometry args={[1, 128, 128]} />
+      <sphereGeometry args={[1, 64, 64]} />
       <meshStandardMaterial
         roughnessMap={roughness}
         normalMap={normal}
@@ -60,15 +59,29 @@ export function Background() {
 }
 
 export function ScenePlanet() {
+  const starMapRef = useRef<THREE.Points>(null!);
+  const cameraRef = useRef<THREE.PerspectiveCamera>(null!);
+
+  useFrame(() => {
+    const { x, y, z } = cameraRef.current.position;
+    starMapRef.current.position.set(x, y, z);
+  });
+
   return (
     <scene>
       <Planet />
-      <PerspectiveCamera fov={70} makeDefault position={[0, 0, 5]} />
+      <Stars fade ref={starMapRef} />
+      <PerspectiveCamera
+        fov={70}
+        makeDefault
+        position={[0, 0, 5]}
+        far={1024}
+        ref={cameraRef}
+      />
       <OrbitControls />
       <Background />
       <ambientLight intensity={0.2} />
       <Star />
-      <Stars fade />
       <Sparkles
         scale={32}
         count={1024}
