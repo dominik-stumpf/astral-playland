@@ -1,16 +1,6 @@
 import { EffectContext } from '../effect-controller/effect-controller';
-import { Billboard, Circle } from '@react-three/drei';
-import {
-  EffectComposer,
-  GodRays,
-  HueSaturation,
-  LensFlare,
-  Noise,
-  Vignette,
-} from '@react-three/postprocessing';
 import { useControls } from 'leva';
-import { BlendFunction } from 'postprocessing';
-import React, { Ref, forwardRef, useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { useContext } from 'react';
 import * as THREE from 'three';
 
@@ -40,33 +30,5 @@ export function Star() {
         <meshBasicMaterial color={starColor} />
       </mesh>
     </group>
-    // <Billboard>
-    //   <Circle
-    //     args={[32, 32]}
-    //     ref={forwardRef}
-    //     position={[256, 0, 0]}
-    //     {...props}
-    //   >
-    //     <meshBasicMaterial color={starColor} />
-    //   </Circle>
-    // </Billboard>
   );
 }
-
-// export function Star() {
-//   const material = useRef<Mesh>(null);
-
-//   const [isStarLoaded, setIsStarLoaded] = useState(false);
-
-//   useEffect(() => {
-//     if (material.current) {
-//       setIsStarLoaded(true);
-//     }
-//   }, []);
-
-//   return (
-//     <group>
-//       <StarMesh ref={material} />
-//     </group>
-//   );
-// }
