@@ -44,14 +44,20 @@ function Planet() {
 
 export function Background() {
   const texture = useTexture('/images/milky-way.jpg');
+  texture.format = THREE.RGBAFormat;
+  const opacity = 0.14;
+
   return (
     <Environment background near={1} far={1000} resolution={2048}>
       <mesh>
         <sphereGeometry args={[100, 64, 64]} />
         <meshBasicMaterial
+          depthWrite={false}
           map={texture}
           side={THREE.BackSide}
-          color={0x777777}
+          alphaTest={opacity}
+          opacity={opacity}
+          transparent
         />
       </mesh>
     </Environment>
